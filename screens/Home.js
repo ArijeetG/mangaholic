@@ -2,6 +2,8 @@ import { Text, SafeAreaView } from "react-native";
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Icon from "react-native-vector-icons/FontAwesome";
+import Topbar from "../components/Topbar";
+import { Searchbar } from "react-native-paper";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -30,7 +32,17 @@ export default function Home() {
 
 function Latest() {
   return (
-    <SafeAreaView>
+    <SafeAreaView
+      style={{
+        padding: "1.5rem",
+      }}
+    >
+      <Topbar />
+      <Searchbar
+        style={{
+          paddingRight: 20,
+        }}
+      />
       <Text>Latest</Text>
     </SafeAreaView>
   );
