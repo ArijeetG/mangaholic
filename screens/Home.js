@@ -3,7 +3,7 @@ import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Topbar from "../components/Topbar";
-import { Searchbar } from "react-native-paper";
+import Latest from "./Latest";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -27,24 +27,6 @@ export default function Home() {
         }}
       />
     </Tab.Navigator>
-  );
-}
-
-function Latest() {
-  return (
-    <SafeAreaView
-      style={{
-        padding: "1.5rem",
-      }}
-    >
-      <Topbar />
-      <Searchbar
-        style={{
-          paddingRight: 20,
-        }}
-      />
-      <Text>Latest</Text>
-    </SafeAreaView>
   );
 }
 
